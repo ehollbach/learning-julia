@@ -18,3 +18,18 @@ end
 
 
 # solve the problem
+solve() = begin
+	result = 0
+	for i = 1:999
+		for j = 1:999
+			if is_palindrome(string(i * j))
+				if i * j > result
+					result = i * j;
+				end
+			end
+		end
+	end
+	result
+end
+
+println(solve());
